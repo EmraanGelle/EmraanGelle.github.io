@@ -1,0 +1,28 @@
+html {
+    font-family: sans-serif;
+}
+img {
+    float: left;
+}
+h1 {
+    color: orange;
+    font-style: italic;
+    padding-top: 30px;
+    margin-left: 10px;
+    text-shadow:2px 2px black
+}
+.W{
+    font-size: 2em;
+}
+
+
+
+
+
+
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
