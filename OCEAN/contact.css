@@ -21,6 +21,7 @@ body {
     color: #333;
     padding: 20px;
     background-image: url("images/north-beach-ocean-nazare-portugal.jpg");
+    box-shadow: 10px 0 10px black;
 }
 
 .contact-container {
