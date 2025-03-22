@@ -12,39 +12,58 @@ body {
 header {
     background-color: #004080;
     color: #fff;
-    padding: 20px 20px;
-}
-  
-header.logo {
+    width: 100%;
+    top: 0px;
+    left: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: #004080;;
+    padding: 20px 40px;
 }
-  
+
+header .logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 header h1 {
     font-size: 20px;
+    margin-right: 50px;
 }
-  
+
+nav {
+    margin-left: auto;
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    flex-wrap: nowrap;
+    gap: 20px;
+    padding-left: 0;
 }
-  
-nav ul li {
-    margin-left: 15%;
-}
-  
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    margin: 0 8px;
     font-weight: bold;
     transition: color 0.3s ease;
 }
-  
+
 nav ul li a:hover {
-    color: #ffcc00;
+    color: cyan;
+}
+
+.search-container {
+    margin-left: auto;
+}
+
+.searchbar {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 200px; 
 }
 
 .hero {
@@ -55,7 +74,7 @@ nav ul li a:hover {
     height: 100vh;
     padding: 20px;
     font-size: 30px;
-    background-image: url("images/north-beach-ocean-nazare-portugal.jpg");
+    background-image: url("/images/north-beach-ocean-nazare-portugal.jpg");
     background-size: cover;
     background-position: center;
     color: rgb(0, 0, 0);
