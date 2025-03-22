@@ -27,6 +27,6 @@ style.textContent = `
         cursor: pointer;
         z-index: 2;
     }
-    .card { position: relative; } /* 確保按鈕定位正確 */
+    .card { position: relative; } 
 `;
 document.head.appendChild(style);

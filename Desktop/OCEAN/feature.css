@@ -1,79 +1,235 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
 
 header {
-    background-color: #004080;
-    color: #fff;
-    padding: 20px 20px;
+  background-color: #004080;
+  color: #fff;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #004080;;
+  padding: 20px 40px;
 }
-  
-header.logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+header .logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
-  
+
 header h1 {
-    font-size: 20px;
+  font-size: 20px;
+  margin-right: 50px;
 }
-  
+
+nav {
+  margin-left: auto;
+}
+
 nav ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: nowrap;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding-left: 0;
 }
-  
-nav ul li {
-    margin-left: 15%;
-}
-  
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 8px;
-    font-weight: bold;
-    transition: color 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
-  
+
 nav ul li a:hover {
-    color: #ffcc00;
+  color: cyan;
 }
 
+.search-container {
+  margin-left: auto;
+}
 
+.searchbar {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 200px; 
+}
+.search-btn {
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #0056b3;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/sea-water-ocean-wave-surfing-surface-colorful-vibrant-sunset-barrel-shape-124362369.webp');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.education-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 60px 40px;
+  background-color: white;
+}
+
+.education-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-10px);
+}
+
+.education-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.education-text {
+  padding: 20px;
+  text-align: center;
+}
+
+.education-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.education-text p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.education-text p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  overflow: hidden;
+  max-height: 200px;
+  opacity: 1;
+}
+
+.education-text p.hidden {
+  opacity: 0;
+  max-height: 0;
+  margin-bottom: 0;
+}
+.learn-more-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.learn-more-btn:hover {
+  background-color: #0056b3;
+}
+
+.quiz-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/ocean-quiz.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.quiz-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.quiz-section p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.quiz-btn {
+  padding: 15px 30px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-btn:hover {
+  background-color: #0056b3;
+}
 
 footer {
-    background-color: #004080;
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 20px;
-  }
+  background-color: #004080;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 20px;
+}
 
 @media (max-width: 768px) {
-    .logo {
-      flex-direction: column;
-    }
-    
-    nav ul {
-      flex-direction: column;
-      width: 100%;
-      text-align: center;
-      margin-top: 10px;
-    }
-    
-    nav ul li {
-      margin: 10px 0;
-    }
-    
-    .feature {
-      padding: 20px 0;
-    }
+  .logo {
+    flex-direction: column;
   }
+  
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  nav ul li {
+    margin: 10px 0;
+  }
+  
+  .feature {
+    padding: 20px 0;
+  }
+}

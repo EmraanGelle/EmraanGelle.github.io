@@ -65,7 +65,19 @@ nav ul li a:hover {
     border: 1px solid #ccc;
     width: 200px; 
 }
-
+.search-btn {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .search-btn:hover {
+    background-color: #0056b3;
+  }
+  
 .hero {
     display: flex;
     flex-direction: column;
@@ -165,6 +177,37 @@ button{
     width: 100%;
     height: 200px;
     object-fit: cover;
+}
+.cta {
+    text-align: center;
+    padding: 60px 20px;
+    background: blue;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+cta-btn {
+    padding: 15px 30px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.cta-btn:hover {
+    background-color: #0056b3;
 }
 
 footer {
