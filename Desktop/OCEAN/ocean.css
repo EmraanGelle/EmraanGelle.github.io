@@ -74,7 +74,7 @@ nav ul li a:hover {
     height: 100vh;
     padding: 20px;
     font-size: 30px;
-    background-image: url("/images/north-beach-ocean-nazare-portugal.jpg");
+    background-image: url("images/north-beach-ocean-nazare-portugal.jpg");
     background-size: cover;
     background-position: center;
     color: rgb(0, 0, 0);
