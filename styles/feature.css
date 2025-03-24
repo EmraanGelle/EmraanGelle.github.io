@@ -79,7 +79,7 @@ nav ul li a:hover {
 }
 
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/sea-water-ocean-wave-surfing-surface-colorful-vibrant-sunset-barrel-shape-124362369.webp');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/sea-water-ocean-wave-surfing-surface-colorful-vibrant-sunset-barrel-shape-124362369.webp');
   background-size: cover;
   background-position: center;
   height: 60vh;
