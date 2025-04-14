@@ -1,71 +1,79 @@
-* {
+@font-face {
+    font-family: 'MyWaterFont';
+    src: url('/fonts/Bubble-w10MZ.otf') format('opentype');
+  }
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body, html {
+    overflow: auto;
+    height: 100%;
+  }
+  
+  body {
+    cursor: pointer;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-}
-
-header {
-    background-color: #004080;
+  }
+  
+  header {
+    background-color: blue;
     color: #fff;
-    width: 100%;
-    top: 0px;
-    left: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #004080;;
     padding: 20px 40px;
-}
-
-header .logo {
+  }
+  
+  header .logo {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-}
-
-header h1 {
-    font-size: 20px;
+  }
+  
+  header h1 {
+    font-size: 30px;
     margin-right: 50px;
-}
-
-nav {
+    font-family: 'MyWaterFont', sans-serif;
+  }
+  
+  nav {
     margin-left: auto;
-}
-
-nav ul {
+  }
+  
+  nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-    padding-left: 0;
-}
-nav ul li a {
+  }
+  
+  nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
+  }
+  
+  nav ul li a:hover {
     color: cyan;
-}
-
-.search-container {
+  }
+  
+  .search-container {
     margin-left: auto;
-}
-
-.searchbar {
+  }
+  
+  .searchbar {
     padding: 8px;
     font-size: 14px;
     border-radius: 4px;
     border: 1px solid #ccc;
-    width: 200px; 
-}
-.search-btn {
+    width: 200px;
+  }
+  
+  .search-btn {
     padding: 10px;
     background-color: #007BFF;
     color: white;
@@ -75,10 +83,10 @@ nav ul li a:hover {
   }
   
   .search-btn:hover {
-    background-color: #0056b3;
+    background-color: blue;
   }
   
-.hero {
+  .hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -86,117 +94,34 @@ nav ul li a:hover {
     height: 100vh;
     padding: 20px;
     font-size: 30px;
-    background-image: url("/images/north-beach-ocean-nazare-portugal.jpg");
+    background-image: url("/images/underwater.jpg");
     background-size: cover;
     background-position: center;
-    color: rgb(0, 0, 0);
+    color: white;
     text-align: center;
-    }
-    
-
-.hero h1 {
-    color: black;
+    z-index: 1;
+  }
+  
+  .hero h1 {
+    font-family: 'MyWaterFont', sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-button{
+  }
+  
+  button {
     font-size: 20px;
     padding: 12px;
     border-radius: 8px;
     color: black;
     border: 2px solid blue;
     background-color: white;
-}
-.primary-btn:hover {
+  }
+  
+  .primary-btn:hover {
     background-color: blue;
     color: white;
-}
-
-.content {
-    padding: 60px 40px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    min-height: 450px;
-}
+  }
   
-.card-content {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    flex-grow: 1;
-    height: 100%;
-}
-  
-.card-content p {
-    border: 2px solid gainsboro;
-    border-radius: 10px;
-    color: #555;
-    margin-bottom: 15px;
-    flex-grow: 1;
-}
-
-.card-content a {
-    text-decoration: none;
-    margin-top: auto;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-  
-.video-btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: 2px solid blue;
-    background: white;
-    color: black;
-    border-radius: 5px;
-    cursor: pointer;
-    width: fit-content;
-}
-  
-.video-btn:hover {
-    color: white;
-    background-color: blue;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-.cta {
-    text-align: center;
-    padding: 60px 20px;
-    background: blue;
-    background-size: cover;
-    background-position: center;
-    color: white;
-}
-
-.cta h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.cta p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-cta-btn {
+  .cta-btn {
     padding: 15px 30px;
     background-color: #007BFF;
     color: white;
@@ -205,36 +130,198 @@ cta-btn {
     font-size: 1.1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-.cta-btn:hover {
+  }
+  
+  .cta-btn:hover {
     background-color: #0056b3;
-}
-
-footer {
-    background-color: #004080;
+  }
+  
+  .content {
+    padding: 60px 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    z-index: 1;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    min-height: 450px;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    flex-grow: 1;
+  }
+  
+  .card-content p {
+    border: 2px solid gainsboro;
+    border-radius: 10px;
+    color: #555;
+    margin-bottom: 15px;
+    flex-grow: 1;
+  }
+  
+  .card-content a {
+    text-decoration: none;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .video-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid blue;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .video-btn:hover {
+    background-color: blue;
+    color: white;
+  }
+  
+  .cta {
+    text-align: center;
+    padding: 60px 20px;
+    background: blue;
+    color: white;
+  }
+  
+  .cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  footer {
+    background-color: blue;
     color: #fff;
     text-align: center;
     padding: 15px 0;
     margin-top: 20px;
   }
-
-@media (max-width: 768px) {
+  
+  .glow-border {
+    position: relative;
+    padding: 5px;
+    border-radius: 12px;
+    background: linear-gradient(270deg, blue, cyan, aquamarine, blue);
+    background-size: 600% 600%;
+    animation: borderGlow 8s linear infinite;
+  }
+  
+  .glow-border:hover {
+    animation: borderGlow 3s linear infinite;
+  }
+  
+  @keyframes borderGlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .bubbles-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .bubble {
+    position: absolute;
+    bottom: -50px;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: float-up linear infinite;
+  }
+  
+  @keyframes float-up {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh);
+      opacity: 0;
+    }
+  }
+  
+  .ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    transform: scale(0);
+    animation: ripple-animation 1.2s linear;
+    pointer-events: none;
+  }
+  
+  @keyframes ripple-animation {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
     .logo {
       flex-direction: column;
     }
-    
+  
     nav ul {
       flex-direction: column;
       width: 100%;
       text-align: center;
       margin-top: 10px;
     }
-    
+  
     nav ul li {
       margin: 10px 0;
     }
-    
+  
     .feature {
       padding: 20px 0;
     }
   }
+  

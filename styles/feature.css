@@ -10,7 +10,7 @@ body {
 }
 
 header {
-  background-color: #004080;
+  background-color: blue;
   color: #fff;
   width: 100%;
   top: 0px;
@@ -18,7 +18,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #004080;;
+  background: blue;
   padding: 20px 40px;
 }
 
@@ -29,7 +29,7 @@ header .logo {
 }
 
 header h1 {
-  font-size: 20px;
+  font-size: 30px;
   margin-right: 50px;
 }
 
@@ -79,7 +79,7 @@ nav ul li a:hover {
 }
 
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/sea-water-ocean-wave-surfing-surface-colorful-vibrant-sunset-barrel-shape-124362369.webp');
+  background: url('/images/sparkly.gif');
   background-size: cover;
   background-position: center;
   height: 60vh;
@@ -205,8 +205,44 @@ nav ul li a:hover {
   background-color: #0056b3;
 }
 
+/* Border styles */
+.glow-border {
+  position: relative;
+  padding: 5px; /* space for border */
+  border-radius: 12px;
+  background: linear-gradient(270deg, blue, cyan, aquamarine, blue); /* Border colors */
+  background-size: 600% 600%;
+  animation: borderGlow 8s linear infinite;
+}
+
+.glow-border:hover {
+  animation: borderGlow 3s linear infinite; /* Faster on hover */
+}
+
+.glow-border .education-card {
+  background: white;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Border Glow Animation */
+@keyframes borderGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Footer styles */
 footer {
-  background-color: #004080;
+  background-color: blue;
   color: #fff;
   text-align: center;
   padding: 15px 0;
@@ -229,6 +265,79 @@ footer {
     margin: 10px 0;
   }
   
+  .feature {
+    padding: 20px 0;
+  }
+}
+
+.bubbles-container {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -50px;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: float-up linear infinite;
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+  transform: scale(0);
+  animation: ripple-animation 1.2s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
   .feature {
     padding: 20px 0;
   }

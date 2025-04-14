@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ocean</title>
+
+  <link rel="stylesheet" href="/styles/ocean.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples-min.js"></script>
+</head>
+
+<body>
+  <!-- Bubbles Container -->
+  <div class="bubbles-container"></div>
+
+  <header>
+    <div class="logo">
+      <h1>OCEANS</h1>
+      <nav>
+        <ul>
+          <li><a href="ocean.html">Home</a></li>
+          <li><a href="feature.html">Features</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="search-container">
+      <input type="text" class="searchbar" placeholder="Explore..." />
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Protecting Our Oceans</h1>
+      <p>Explore. Dream. Discover the Ocean</p>
+      <button class="primary-btn ripples" id="explore-btn">EXPLORE</button>
+    </div>
+
+    <section class="content" id="cards-section">
+      <div class="glow-border">
+        <div class="card">
+          <img src="/images/sea-creatures.jpg" alt="Sea Creatures" />
+          <div class="card-content">
+            <h3>Animal Facts</h3>
+            <p>Discover fascinating facts about ocean creatures.</p>
+            <a href="https://www.youtube.com/watch?v=v7GOSYDu-mo">
+              <button class="video-btn ripples">Watch Video</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="glow-border">
+        <div class="card">
+          <img src="/images/people-cleaning-garbage-from-nature.jpg" alt="Ocean Cleanup" />
+          <div class="card-content">
+            <h3>Ocean Clean-Up</h3>
+            <p>Fighting ocean pollution to protect marine life.</p>
+            <a href="https://www.youtube.com/watch?v=FdZXRZ3-zZs">
+              <button class="video-btn ripples">Watch Video</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="glow-border">
+        <div class="card">
+          <img src="/images/seal-ice-floe-with-plastic_23-2151945592.jpg" alt="Wildlife" />
+          <div class="card-content">
+            <h3>Wildlife Protection</h3>
+            <p>Safeguarding endangered species for future generations.</p>
+            <a href="https://www.youtube.com/watch?v=LM6bBQ3qBYg">
+              <button class="video-btn ripples">Watch Video</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="glow-border">
+        <div class="card">
+          <img src="/images/shutterstock_2565042867.jpg" alt="Atlantis" />
+          <div class="card-content">
+            <h3>Legend of Atlantis</h3>
+            <p>The legend of Atlantis is a story about a moral, spiritual people who lived in a highly advanced, utopian civilization.</p>
+            <a href="https://www.youtube.com/watch?v=ErPsyBUCijM">
+              <button class="video-btn ripples">Watch Video</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Join Us in Protecting Our Oceans</h2>
+      <p>Every action counts. Together, we can make a difference.</p>
+      <button class="cta-btn ripples">Get Involved</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 OCEANS</p>
+  </footer>
+
+  <!-- Your JS Files -->
+  <script src="ripples.js"></script>
+  <script src="ocean.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Ripple Effect with Canvas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Canvas for Ripple Effect -->
+    <canvas id="ripplesCanvas"></canvas>
+
+    <script>
+        // Setup the canvas and context
+        const canvas = document.getElementById("ripplesCanvas");
+        const ctx = canvas.getContext("2d");
+
+        // Make canvas full-screen
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Array to hold all ripples
+        const ripples = [];
+
+        // Event listener to trigger ripple effect on click
+        canvas.addEventListener("click", function (e) {
+            const x = e.clientX; // Get X position of click
+            const y = e.clientY; // Get Y position of click
+            // Create multiple ripples with different properties
+            for (let i = 0; i < 5; i++) {
+                ripples.push(new Ripple(x, y, i)); // Add new ripple to array
+            }
+        });
+
+        // Ripple class that defines the properties of each ripple
+        function Ripple(x, y, delay) {
+            this.x = x;
+            this.y = y;
+            this.radius = 0; // Start radius of the ripple
+            this.maxRadius = 150 + (Math.random() * 50); // Randomize the max radius
+            this.alpha = 0.6; // Start opacity of the ripple
+            this.delay = delay * 100; // Delay each ripple slightly to create a sequence
+        }
+
+        // Update and draw the ripple
+        Ripple.prototype.update = function () {
+            // Only update ripple after its delay time has passed
+            if (Date.now() - this.delay < 0) return true;
+
+            this.radius += 2; // Increase the radius
+            this.alpha -= 0.02; // Decrease opacity (fade out)
+            if (this.alpha <= 0) return false; // Remove ripple when it’s invisible
+            return true;
+        };
+
+        Ripple.prototype.draw = function () {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2); // Draw a circle
+            ctx.fillStyle = `rgba(0, 255, 255, ${this.alpha})`; // Use semi-transparent cyan for the ripple
+            ctx.fill();
+        };
+
+        // Function to animate and update all ripples
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas on each frame
+
+            // Update and draw each ripple
+            for (let i = 0; i < ripples.length; i++) {
+                if (!ripples[i].update()) {
+                    ripples.splice(i, 1); // Remove finished ripple from array
+                    i--;
+                } else {
+                    ripples[i].draw(); // Draw the active ripple
+                }
+            }
+
+            requestAnimationFrame(animate); // Continue the animation loop
+        }
+
+        // Start the animation loop
+        animate();
+    </script>
+
+</body>
+
+</html>

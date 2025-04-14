@@ -1,8 +1,19 @@
+@font-face {
+    font-family: 'MyWaterFont';
+    src: url('/fonts/Bubble-w10MZ.otf') format('opentype');
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+}
+
+h1 {
+    font-family: 'MyWaterFont', sans-serif;
+    font-size: 50px;
+    margin-right: 50px;
 }
 
 .container {
@@ -12,13 +23,16 @@ body {
 }
 
 .about-section {
-    background: #fff;
+    background: rgb(1, 1, 104);
+    background-image: url('/images/shark-cursor.png');
+    background-repeat: repeat;
+    background-size: 150px 150px; /* Resizes the image to 100px by 100px */
     padding: 30px 0;
 }
 
 .about-section h1 {
     text-align: center;
-    color: #333;
+    color: white;
     padding: 20px;
     background-image: url("images/north-beach-ocean-nazare-portugal.jpg");
 }
@@ -37,28 +51,79 @@ body {
     background: #f9f9f9;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    /* Add layout for glow boxes inside */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.about-content h2 {
-    color: #333;
+.about-box {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
 }
 
-.about-content p {
-    color: #666;
+/* 👇 Glow effect */
+.glow-border {
+    position: relative;
+    padding: 5px;
+    border-radius: 12px;
+    background: linear-gradient(270deg, blue, cyan, aquamarine, blue);
+    background-size: 600% 600%;
+    animation: borderGlow 8s linear infinite;
+}
+
+.glow-border:hover {
+    animation: borderGlow 3s linear infinite;
+}
+
+@keyframes borderGlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* ☝ End of new additions */
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap; 
+}
+
+.about-content {
+    flex: 0.7; /* Adjusted to take less horizontal space */
+    margin: 10px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 550px; /* Reduced the max width */
 }
 
 .about-image {
-    flex: 1;
-    margin: 10px;
+    flex: 1.3; /* Increased to give more horizontal space */
+    margin-left: 30px;
     text-align: center;
+    max-width: 700px;
 }
 
 .about-image img {
-    width: 100%;
+    width: 150%;
     max-width: 400px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+
 
 @media (max-width: 768px) {
     .about-container {
